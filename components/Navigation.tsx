@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useAuth } from '@/contexts/AuthContext';
-import { Briefcase, Home, Users, User, LogOut } from 'lucide-react';
+import { Briefcase, Home, Users, User, LogOut, BarChart3 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
@@ -14,6 +14,7 @@ export function Navigation() {
 
   const links = [
     { href: '/feed', icon: Home, label: 'Feed' },
+    { href: '/dashboard', icon: BarChart3, label: 'Dashboard' },
     { href: '/network', icon: Users, label: 'Network' },
     { href: `/profile/${user.id}`, icon: User, label: 'Profile' },
   ];
@@ -30,7 +31,7 @@ export function Navigation() {
           <div className="flex items-center gap-1">
             {links.map((link) => {
               const Icon = link.icon;
-              const isActive = pathname === link.href;
+              const isActive = pathname === link.href || pathname?.startsWith(link.href + '/');
               return (
                 <Link
                   key={link.href}
