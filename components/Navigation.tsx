@@ -22,9 +22,9 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[rgba(15,18,25,0.7)] backdrop-blur-xl border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <Link href="/feed" className="flex items-center gap-3 group">
-            <Briefcase className="w-6 h-6 text-indigo-500 group-hover:text-white transition-colors" />
-            <span className="text-xl font-extrabold tracking-tighter">THE LOOM</span>
+          <Link href="/feed" className="flex flex-col items-center justify-center group py-2">
+            <Briefcase className="w-6 h-6 text-indigo-500 group-hover:text-white transition-colors mb-1" />
+            <span className="text-sm font-extrabold tracking-tighter leading-none">THE LOOM</span>
           </Link>
 
           <div className="flex items-center gap-1">

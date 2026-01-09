@@ -33,8 +33,8 @@ export default function Home() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
         <nav className="flex items-center justify-between mb-20">
-          <div className="flex items-center gap-3">
-            <Briefcase className="w-8 h-8 text-indigo-500" />
+          <div className="flex flex-col items-start">
+            <Briefcase className="w-8 h-8 text-indigo-500 mb-2" />
             <span className="text-2xl font-extrabold tracking-tighter">THE LOOM</span>
           </div>
           <div className="flex items-center gap-4">
